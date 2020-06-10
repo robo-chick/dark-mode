@@ -229,8 +229,8 @@ img {
 .coin__title {
   display: block;
   margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  min-width: 160px;
+  text-align: center;
 }
 
 .coin__symbol {
@@ -250,4 +250,14 @@ text-align: left;
     background-color: #1F2022;
     border: none;
   }
+
+  #chart-line {
+    stroke: #FFFFE0;
+  }
+
+  #grid {
+    stroke: #EEE8AA;
+  }
+
+
 }
