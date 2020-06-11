@@ -4,6 +4,8 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import EventList from './components/EventList';
+import { BrowserRouter as Router,  Route, Switch } from 'react-router-dom';
 
 import "./styles.scss";
 
@@ -21,10 +23,20 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Charts coinData={coinData} />
+      <Switch>
+        <Route exact path='/'>
+          <Charts coinData={coinData} />
+          </Route>
+          <Route path='/events'>
+            <EventList />
+          </Route>
+      </Switch>
     </div>
   );
 };
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+<Router>
+ <App />
+ </Router>, rootElement);
