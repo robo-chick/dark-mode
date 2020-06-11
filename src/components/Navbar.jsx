@@ -12,9 +12,11 @@ const Navbar = (key, initialValue) => {
   };
   return (
     <nav className="navbar">
+      <div className="nav-left">
       <h1>Crypto Tracker</h1>
       <NavLink className='navLink' to='/'>Home</NavLink>
       <NavLink className='navLink' to='events'>Events</NavLink>
+      </div>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}

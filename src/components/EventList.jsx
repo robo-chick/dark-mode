@@ -28,6 +28,9 @@ export default function EventList() {
                      description={event.description}
                      organizer={event.organizer}
                      start_date={event.start_date}
+                     venue={event.venue}
+                     city={event.city}
+                     country={event.country}
                      />    
                 )
             })}
